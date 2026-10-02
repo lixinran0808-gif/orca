@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Orca AI Organization Mission",
+  "type": "object",
+  "required": [
+    "mission_id",
+    "objective",
+    "commander",
+    "workers",
+    "approval"
+  ],
+  "properties": {
+    "mission_id": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "commander": {
+      "const": "claude"
+    },
+    "workers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "agent",
+          "task",
+          "deliverables"
+        ],
+        "properties": {
+          "agent": {
+            "type": "string"
+          },
+          "task": {
+            "type": "string"
+          },
+          "deliverables": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "required": [
+        "final_authority",
+        "status"
+      ],
+      "properties": {
+        "final_authority": {
+          "const": "human_supervisor"
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "approved",
+            "rejected",
+            "rerun"
+          ]
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
