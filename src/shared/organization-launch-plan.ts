@@ -1,5 +1,6 @@
 import type { AgentLaunchIntent } from './agent-launch-intent'
 import type { TuiAgent } from './tui-agent'
+import { isOrganizationAgentCostAllowed } from './organization-cost-policy'
 import {
   planOrganizationMission,
   type OrganizationAgentId,
@@ -37,6 +38,15 @@ export function buildOrganizationLaunchPlans(params: {
   worktree: string
 }): readonly OrganizationLaunchPlan[] {
   return planOrganizationMission(params.mission).map((assignment) => {
+    if (!isOrganizationAgentCostAllowed(assignment.agent)) {
+      return {
+        assignment,
+        blockedReason: assignment.agent === 'jev'
+          ? 'paid_external_usage_prohibited'
+          : 'external_adapter_not_cost_verified'
+      }
+    }
+
     const agent = ORCA_AGENT_MAP[assignment.agent]
     if (!agent) {
       return {
