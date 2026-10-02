@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "authority": {
+    "human_supervisor": {
+      "rank": 0,
+      "final_authority": true
+    },
+    "claude_code": {
+      "rank": 1,
+      "role": "field_commander",
+      "final_authority": false
+    }
+  },
+  "agents": [
+    {
+      "id": "claude",
+      "name": "Claude Code",
+      "role": "Field Commander / Chief Architect",
+      "duties": [
+        "decompose",
+        "delegate",
+        "dependency-management",
+        "compare",
+        "integration-proposal"
+      ]
+    },
+    {
+      "id": "codex",
+      "name": "OpenAI Codex",
+      "role": "Principal Engineer",
+      "duties": [
+        "implementation",
+        "backend",
+        "refactor",
+        "tests"
+      ]
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "role": "Large Context Analyst",
+      "duties": [
+        "repository-analysis",
+        "spec-analysis",
+        "dependency-analysis"
+      ]
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "role": "Product Strategist",
+      "duties": [
+        "requirements",
+        "product-design",
+        "ux",
+        "research",
+        "specification"
+      ]
+    },
+    {
+      "id": "jev",
+      "name": "Jev",
+      "role": "Decision Engine",
+      "duties": [
+        "candidate-selection",
+        "classification",
+        "decision-support"
+      ]
+    },
+    {
+      "id": "hermes",
+      "name": "Hermes Agent",
+      "role": "Memory and Integration Agent",
+      "duties": [
+        "project-memory",
+        "cross-service-context",
+        "continuity"
+      ]
+    },
+    {
+      "id": "devin",
+      "name": "Devin",
+      "role": "Independent Development Unit",
+      "duties": [
+        "issue-to-solution",
+        "autonomous-implementation"
+      ]
+    },
+    {
+      "id": "openhands",
+      "name": "OpenHands",
+      "role": "Autonomous Experiment Unit",
+      "duties": [
+        "sandbox-experiments",
+        "execute-debug-retry"
+      ]
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor Agent",
+      "role": "UI and Rapid Editing Unit",
+      "duties": [
+        "frontend",
+        "ui",
+        "interactive-editing"
+      ]
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "role": "MCP and Tool Integration Unit",
+      "duties": [
+        "mcp",
+        "api-integration",
+        "tool-routing"
+      ]
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "role": "Git Specialist",
+      "duties": [
+        "small-patches",
+        "commit-scoped-edits",
+        "git-workflow"
+      ]
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "role": "Independent Second Opinion",
+      "duties": [
+        "alternative-solution",
+        "adversarial-review"
+      ]
+    },
+    {
+      "id": "copilot",
+      "name": "GitHub Copilot",
+      "role": "Code Review and GitHub Unit",
+      "duties": [
+        "pr-review",
+        "github-workflow",
+        "code-review"
+      ]
+    },
+    {
+      "id": "continue",
+      "name": "Continue",
+      "role": "Local Model Research Unit",
+      "duties": [
+        "local-models",
+        "byo-model",
+        "ide-experiments"
+      ]
+    },
+    {
+      "id": "replit",
+      "name": "Replit Agent",
+      "role": "Rapid Prototype Unit",
+      "duties": [
+        "web-prototype",
+        "proof-of-concept"
+      ]
+    }
+  ],
+  "rules": {
+    "parallel_agent_target": {
+      "min": 3,
+      "max": 8
+    },
+    "commander_may_finalize": false,
+    "human_approval_required": [
+      "merge-main",
+      "production-deploy",
+      "release",
+      "destructive-operation",
+      "secret-change",
+      "paid-resource",
+      "external-publish",
+      "irreversible-migration"
+    ],
+    "always_return_artifacts": true
+  }
+}
