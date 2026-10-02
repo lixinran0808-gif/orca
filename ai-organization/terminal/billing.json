@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-10-03",
+  "providers": [
+    {
+      "id": "codex",
+      "name": "Codex / ChatGPT",
+      "biller": "OpenAI",
+      "condition": "ChatGPT契約内・追加クレジット・APIを区別。契約未確認",
+      "inputPerMillion": null,
+      "outputPerMillion": null,
+      "source": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+    },
+    {
+      "id": "claude",
+      "name": "Claude Code",
+      "biller": "Anthropic / 使用クラウド",
+      "condition": "契約枠内とAPI課金は別。追加usage creditsにも注意",
+      "inputPerMillion": null,
+      "outputPerMillion": null,
+      "source": "https://code.claude.com/docs/en/costs"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "biller": "Google",
+      "condition": "CLI認証とAPI無料/有料枠で異なる",
+      "inputPerMillion": null,
+      "outputPerMillion": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "biller": "xAI",
+      "condition": "APIモデルのtoken・検索等で従量課金",
+      "inputPerMillion": null,
+      "outputPerMillion": null,
+      "source": "https://docs.x.ai/developers/pricing"
+    },
+    {
+      "id": "hermes",
+      "name": "Hermes Agent",
+      "biller": "設定したモデル提供元",
+      "condition": "エージェントと接続先LLMの費用を区別。設定未確認",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "jev",
+      "name": "Jev",
+      "biller": "Jev / 契約先（未確認）",
+      "condition": "単価・契約未確認のため停止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "devin",
+      "name": "Devin",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "openhands",
+      "name": "OpenHands",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor Agent",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "copilot",
+      "name": "GitHub Copilot",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "continue",
+      "name": "Continue",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    },
+    {
+      "id": "replit",
+      "name": "Replit Agent",
+      "biller": "各サービス / 接続先LLM",
+      "condition": "契約・モデル・無料枠未確認。自動起動禁止",
+      "inputPerMillion": null,
+      "outputPerMillion": null
+    }
+  ]
+}
